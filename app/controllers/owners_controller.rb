@@ -31,7 +31,7 @@ class OwnersController < ApplicationController
 
   patch '/owners/:id' do
     if !params[:owner].keys.include?("pet_ids")
-    params[:owner]["pet_ids"] = []
+      params[:owner]["pet_ids"] = []
     end
 
     @owner = Owner.find(params[:id])
